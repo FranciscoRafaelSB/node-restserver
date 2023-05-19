@@ -60,10 +60,14 @@ export const usuariosPut = async (req = request, res = response) => {
 export const usuariosDelete = async (req = request, res = response) => {
   const { id } = req.params;
 
+  // const uid = req.uid;
+
   //Borrar fisicamente de la db
   // await Usuario.findByIdAndDelete(id);
 
   const usuario = await Usuario.findByIdAndUpdate(id, { estado: false });
+  //usuarioAutenticado
+  // const usuarioAuth = req.usuario;
 
   res.json({
     usuario,
