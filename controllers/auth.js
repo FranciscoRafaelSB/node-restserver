@@ -1,6 +1,6 @@
 import bcryptjs from "bcryptjs";
 
-import { response, request, json } from "express";
+import { response, request } from "express";
 import { Usuario } from "../models/usuario.js ";
 import { generarJWT } from "../helpers/generarJWT.js";
 import { googleVerify } from "../helpers/google-verify.js";

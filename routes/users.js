@@ -20,11 +20,11 @@ import {
   existeUsuarioPorId,
 } from "../helpers/dbValidators.js";
 
-export const router = Router();
+export const usersRouter = Router();
 
-router.get("/", usuariosGet);
+usersRouter.get("/", usuariosGet);
 
-router.put(
+usersRouter.put(
   "/:id",
   [
     check("id", "No es un ID valido").isMongoId(),
@@ -35,7 +35,7 @@ router.put(
   usuariosPut
 );
 
-router.post(
+usersRouter.post(
   "/",
   [
     check("nombre", "El nombre es obligatorio").notEmpty(),
@@ -52,7 +52,7 @@ router.post(
   usuariosPost
 );
 
-router.delete(
+usersRouter.delete(
   "/:id",
   [
     validarJWT,
