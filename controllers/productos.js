@@ -1,7 +1,6 @@
 import { response, request } from "express";
 
 import { Producto, Categoria } from "../models/index.js";
-import { isObjectIdOrHexString, isValidObjectId } from "mongoose";
 
 //obtenerProductos - paginado - total - populate
 export const obtenerProductos = async (req = request, res = response) => {
